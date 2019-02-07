@@ -12,6 +12,10 @@ namespace c0725450
         {
             var a = new TestQuestion2();
             a.PlayingWithForLoops();
+
+            var b = new BirthdayParty();
+            b.setupPartyList();
+            b.printPartyList();
         }
     }
 
@@ -66,7 +70,7 @@ namespace c0725450
         public Dog tail;
         public Dog temporary;
         
-        public void Pea()
+        public void setupPartyList()
         {
             peanut = new Dog("Peanut", "Bichon");
             fifi = new Dog("Fifi", "Poodle");
@@ -86,5 +90,18 @@ namespace c0725450
 
 
         }
+
+        public string printPartyList(Dog startOfList, Dog endOfList)
+        {
+            string inviteList = "*--";
+            temporary = head;
+            while(temporary.nextDog!=null)
+            {
+                inviteList += temporary.dogName + "*---*";
+            }
+            return inviteList
+        }
     }
+
+    
 }
