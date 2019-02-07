@@ -16,6 +16,7 @@ namespace c0725450
             var b = new BirthdayParty();
             b.setupPartyList();
             Console.WriteLine(b.printPartyList());
+            Console.WriteLine(b.printPartyListReverse());
         }
     }
 
@@ -99,21 +100,21 @@ namespace c0725450
 
         }
 
-        //public string printPartyList()
-        //{
-        //    string inviteList = "*--";
-        //    temporary = head;
-        //    while(temporary.nextDog!=null)
-        //    {
-
-        //        inviteList += temporary.dogName + "*---*";
-        //        temporary = temporary.nextDog;
-
-        //    }
-        //    inviteList += temporary.dogName + "*---*";
-        //    return inviteList;
-
         public string printPartyList()
+        {
+            string inviteList = "*--";
+            temporary = head;
+            while (temporary.nextDog != null)
+            {
+
+                inviteList += temporary.dogName + "*---*";
+                temporary = temporary.nextDog;
+
+            }
+            inviteList += temporary.dogName + "*---*";
+            return inviteList;
+        }
+            public string printPartyListReverse()
         {
             string inviteList = "*--";
             temporary = tail;
