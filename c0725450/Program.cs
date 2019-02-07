@@ -42,4 +42,28 @@ namespace c0725450
             return true;
         }
     }
+    
+    class Dog
+    {
+        public Dog(string name, string breed)
+        {
+            dogName = name;
+            dogBreed = breed;
+        }
+        public string dogName;
+        public string dogBreed;
+        public Dog nextDog;
+        public Dog previousDog;
+    }
+    class BirthdayParty
+    {
+        public Dog peanut;
+        public Dog fifi;
+        public Dog clarence;
+        public Dog roy;
+
+        public Dog head;
+        public Dog tail;
+        public Dog temporary;
+    }
 }
